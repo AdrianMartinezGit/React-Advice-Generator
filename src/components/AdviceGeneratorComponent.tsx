@@ -1,22 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 import logo from '../logo.svg';
+import Advice from '../Interfaces/Interface';
+import '../App.css';
 
-const AdviceGeneratorComponent = () => {
+const AdviceGeneratorComponent = (props: {id: number, advice: string}) => {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Advice #{props.id}</p>
+        <p>"{props.advice}"</p>
       </header>
     </div>
   )
