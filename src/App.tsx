@@ -16,11 +16,10 @@ export default function App() {
     adviceData();
   }, []);
 
-
   return (
     <div>
       {
-        adviceInfo && <AdviceGeneratorComponent id={adviceInfo.id} advice={adviceInfo.advice}/>
+        adviceInfo && <AdviceGeneratorComponent id={adviceInfo.slip.id} advice={adviceInfo.slip.advice}/>
       }
     </div>
   );
